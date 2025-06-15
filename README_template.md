@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="{https://your-demo-link.your-domain}">
+    <a href="{https://device-shop-checkout-master-git-master-josselfs-projects.vercel.app/}">
       Demo
     </a>
     <span> | </span>
