@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --black: #1d1d1f;
+    --gray: #394150;
+    --gray-light: #d2d5da;
+    --white: #ffffff;
+    --bg-color-cart: #f3f4f6;
+    --gray-semi-light: #e5e7eb;
+    /* Meausures */
+    --10px: 10px;
+    --15px: 15px;
+    --20px: 20px;
+    --30px: 30px;
+    --25px: 25px;
+    --text-1rem: 1rem;
+    --text-1-1rem: 1.1rem;
+    --text-1-5rem: 1.5rem;
+    --font-weigth-600: 600;
+    --font-weigth-700: 700;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    min-height: 100dvh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray-light);
+}
+
+/* BACKGROUND IMAGE */
+
+.background-image {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 156px;
+    background-image: url('./resources/background-image.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+/* HEADER SECTIONN */
+.titles {
+    display: flex;
+    gap: var(--30px);
+    color: var(--white);
+    padding: var(--10px);
+}
+
+.titles h1 {
+    font-size: var(--text-1-5rem);
+    font-weight: var(--font-weigth-700);
+}
+
+.titles h2 {
+    font-size: var(--text-1rem);
+    font-weight: var(--font-weigth-600);
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 5px var(--15px);
+    background-color: var(--black);
+    border-radius: 50px;
+}
+
+/* MAIN SECTION */
+
+.checkout__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .6rem;
+    background-color: var(--gray-semi-light);
+    width: clamp(300px, 100%, 1150px);
+    border-radius: var(--20px);
+}
+
+/* CART SECTION */
+
+.checkout__cart {
+    padding: var(--20px) var(--30px);
+}
+
+.cart__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5px;
+    padding: .9rem 0;
+}
+
+.cart__item:nth-child(3) {
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: var(--25px);
+}
+
+.cart__details {
+    flex: 2;
+    padding-left: var(--20px);
+    position: relative;
+}
+
+.cart__details span {
+    position: absolute;
+    top: 70px;
+}
+
+.cart__price-remove {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cart__price-remove p {
+    font-weight: var(--font-weigth-600);
+}
+
+.cart__price-remove button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-size: .9rem;
+    top: 70px;
+}
+
+/* CART COUPON SECTION */
+
+.cart__coupon {
+    padding: var(--25px) 0;
+    display: flex;
+}
+
+.cart__coupon input {
+    flex: 1;
+    padding: var(--15px);
+    border-radius: var(--10px);
+    border: 1px solid var(--gray-light);
+    font-size: var(--text-1rem);
+}
+
+.cart__coupon button {
+    margin: 0 5px;
+    padding: var(--10px) var(--20px);
+    border: none;
+    border-radius: var(--10px);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--text-1-1rem);
+    cursor: pointer;
+}
+
+/* SUBTOTAL, TAX AND TOTAL */
+
+.cart__total {
+    display: flex;
+    flex-direction: column;
+    gap: var(--10px);
+}
+
+.cart__subtotal,
+.cart__tax,
+.cart__total-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart__subtotal,
+.cart__tax {
+    color: var(--gray);
+    font-weight: var(--font-weigth-600);
+}
+
+/* IMAGE CART */
+
+.image-wrapper {
+    height: 100px;
+    width: 110px;
+    background-color: var(--bg-color-cart);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FORM */
+
+.checkout__cart-form {
+    background-color: var(--white);
+    border-bottom-right-radius: var(--20px);
+    border-top-right-radius: var(--20px);
+}
+
+.checkout__form {
+    padding: var(--20px) var(--30px);
+    margin: var(--10px) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.form__row {
+    display: flex;
+    gap: var(--20px);
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+}
+
+.form__group select {
+    padding: var(--15px);
+    border-radius: var(--10px);
+    font-size: var(--text-1rem);
+    border: 1px solid var(--gray-light);
+    background-color: var(--gray-semi-light);
+}
+
+.checkout__form h4 {
+    font-weight: var(--font-weigth-600);
+}
+
+.checkout__form label {
+    color: var(--gray);
+    font-weight: var(--font-weigth-600);
+    margin: 5px 0;
+    font-size: .9rem;
+}
+
+.checkout__form input {
+    padding: var(--15px);
+    border-radius: var(--10px);
+    font-size: var(--text-1rem);
+    border: 1px solid var(--gray-light);
+}
+
+.checkout__form button {
+    padding: var(--10px);
+    border: none;
+    border-radius: var(--10px);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--text-1-1rem);
+}
+
+/* AUTHOR FOOTER */
+
+.author-info {
+    position: absolute;
+    bottom: 0;
+}
+
+.author-info a {
+    color: var(--black);
+    font-weight: var(--font-weigth-600);
+}
+
+/* MEDIAQUERIES MOBILE */
+
+@media screen and (max-width: 768px) {
+
+    .titles {
+        padding: var(--30px);
+    }
+
+    .checkout__container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart__item {
+        width: 90%;
+    }
+
+    .cart__total {
+        padding: 0 var(--10px);
+    }
+
+    .checkout__cart-form input {
+        width: 100%;
+    }
+
+    .checkout__cart-form button {
+        padding: var(--15px);
+    }
+
+    .author-info {
+        position: relative;
+        margin: var(--20px) 0;
+        bottom: 0;
+    }
+
+}

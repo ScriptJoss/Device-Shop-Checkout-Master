@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Device Shop Checkout | devChallenges.io</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Image -->
+    
+    <div class="background-image">
+      <header class="titles">
+        <h1>Checkout</h1>
+        <h2>3 items</h2>
+      </header>
+    </div>
+    <!-- Header Section -->
+    <main class="checkout__container">
+      <!-- Cart Section -->
+      <section class="checkout__cart">
+        <!-- Item 1. -->
+        <article class="cart__item">
+          <div class="image-wrapper">
+            <img src="resources/Gold.png" alt="" />
+          </div>
+          <div class="cart__details">
+            <h4>iPhone 12 Pro</h4>
+            <p>Golden</p>
+            <span>x 1</span>
+          </div>
+          <div class="cart__price-remove">
+            <p>$999.00</p>
+            <button>X</button>
+          </div>
+        </article>
+
+        <!-- Item 2. -->
+        <article class="cart__item">
+          <div class="image-wrapper">
+            <img src="resources/Apple-watch.png" alt="" />
+          </div>
+          <div class="cart__details">
+            <h4>Apple Watch</h4>
+            <p>Blue</p>
+            <span>x 1</span>
+          </div>
+          <div class="cart__price-remove">
+            <p>$399.00</p>
+            <button>X</button>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="cart__item">
+          <div class="image-wrapper">
+            <img src="resources/iMac.png" alt="" />
+          </div>
+          <div class="cart__details">
+            <h4>iMac</h4>
+            <p>Green</p>
+            <span>x 1</span>
+          </div>
+          <div class="cart__price-remove">
+            <p>$1199.00</p>
+            <button>X</button>
+          </div>
+        </article>
+
+        <!-- Cart Coupon -->
+        <section class="cart__coupon">
+          <input type="text" placeholder="Enter coupon code" />
+          <button>Apply Coupon</button>
+        </section>
+        <!-- Subtotal, Tax and total -->
+        <aside class="cart__total">
+          <div class="cart__subtotal">
+            <p>Subtotal</p>
+            <p>$2597.00</p>
+          </div>
+          <div class="cart__tax">
+            <p>Tax</p>
+            <p>$623.28</p>
+          </div>
+          <div class="cart__total-price">
+            <h3>Total</h3>
+            <h3>$3220.28</h3>
+          </div>
+        </aside>
+      </section>
+      <!-- Form Section -->
+      <section class="checkout__cart-form">
+        <form action="" class="checkout__form">
+          <h4>Contact Information</h4>
+          <!-- Input first name and last name -->
+          <div class="form__group">
+            <label for="name">First & Last name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter first & last name"
+              required
+            />
+          </div>
+          <!-- Input email address -->
+          <div class="form__group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email address"
+              required
+            />
+          </div>
+          <!-- Input Country -->
+          <!-- Form row, i need use flex for this one -->
+          <div class="form__row">
+            <div class="form__group">
+              <label for="country">Country</label>
+              <select name="country" id="country" required>
+                <option value="Finlandia">Finlandia</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Australia">Australia</option>
+              </select>
+            </div>
+            <!-- Input postal code -->
+            <div class="form__group">
+              <label for="postal-code">Postal Code</label>
+              <input
+                type="text"
+                id="postal-code"
+                placeholder="00270"
+                required
+              />
+            </div>
+          </div>
+          <!-- Button Submit -->
+          <button type="submit">Continue</button>
+        </form>
+      </section>
+    </main>
+
+    <div class="author-info">
+      Coded by <a href="#">ScriptJoss</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+  </body>
+</html>
